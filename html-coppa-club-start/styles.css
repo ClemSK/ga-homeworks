@@ -1,0 +1,138 @@
+body{ 
+    font-family: 'Raleway', sans-serif;
+}
+.wrap {
+    width: 100%;
+    position: relative;
+  }
+  .wrap img {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+  }
+.welcome-img {
+    background-image: url("file:///Users/Clem/SEI/Homeworks/ga-homeworks/html-coppa-club-start/images/hero.jpg");
+    width: 100%;
+}
+.welcome-text {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    line-height: 1.33;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    text-transform: capitalize;
+}
+h1 {
+    font-size: 36px;
+    margin: 0px;
+}
+h2 {
+    top: 20px;
+}
+h3 {
+    font-size: 20px;
+    margin: 0px;
+}
+nav {
+    
+}
+li {
+    display: inline;
+    padding: 15px;
+    border-left: 3px solid white;
+}
+section {
+    text-align: center;
+    width: 650px;
+}
+.about {
+    color: #1a8e88;
+    position: relative;
+    width: 650px;
+    left: 375px;
+}
+.contact {
+    color: #1a8e88;
+    position: relative;
+    width: 650px;
+    left: 375px;
+    font-weight: bold 800;
+}
+.view {
+    background-image: url("file:///Users/Clem/SEI/Homeworks/ga-homeworks/html-coppa-club-start/images/gallery-image-1.jpg");
+    width: 100%;
+}
+.menus {
+    color: #1a8e88;
+    position: relative;
+    width: 650px;
+    left: 375px; 
+    padding: 0px 0px 10px 0px;
+}
+ul {
+    width: 100px;
+}
+.meals {
+    border: #1a8e88 dotted 2px; 
+}
+.sign-up {
+    width: 100%;
+    background-color: #1a8e88;
+    height: 300px;
+}
+.sign-up-text {
+    position: relative;
+    padding: 20px;
+    color: white;
+    width: 350px;
+    left: 500px;
+}
+.book-now {
+    color: #1a8e88;
+    position: relative;
+    left: 380px;
+    padding: 20px;
+    z-index: 1;
+    top: 75px;
+    font-size: 36px;
+    
+}
+.form {
+    width: 350px; /* Full width */
+    height: 500px;
+    padding: 20px; /* Some padding */ 
+    border: 7px double #1a8e88; /* Gray border */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 50px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    position: relative;
+    left: 500px;
+    z-index: 0;
+}
+input, label {
+    margin: 20px 0px;
+    resize: vertical;
+}
+.location-contact {
+    text-decoration: underline;
+}
+.join-us {
+    background-color: white;
+    color: #1a8e88;
+    margin: 40px;
+    left: 300px;
+}
+.join-img {
+    display: inline;
+    width: 30%;
+}
+.footer {
+    display: inline-block;
+    padding: 0px 20px;
+    width: 30%;
+
+}
+
