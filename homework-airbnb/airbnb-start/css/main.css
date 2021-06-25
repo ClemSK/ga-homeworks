@@ -1,0 +1,209 @@
+body {
+    font-family: 'Montserrat', sans-serif;;
+}
+/* Header */
+.header-logo {
+    height: 40px;
+}
+.login {
+    padding: 0px 10px;
+}
+nav {
+    margin:0 1em;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    align-self: flex-end;
+    list-style-type: none;
+    padding: 10px;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:700px;
+    background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/melbourne.jpg');
+	background-size:cover;
+}
+h2 {
+    font-size: 5em;
+    font-weight: 900;
+    margin: 0;
+}
+
+.hero-content {
+    max-width: 550px;
+    color: honeydew;
+    text-align: center;
+}
+.hero-content p {
+    padding: 20px;
+}
+
+/* Local */
+.local-section {
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+	border: 1px solid #dcdcdc;
+    padding: 40px 0px;
+    
+}
+.local-title {
+	padding:20px;
+	background-color:#edefed;
+    margin: 0px;
+}
+.local-wrapper {
+    display: flex;
+    flex-direction: column;
+    
+    width: 45%;
+    border: 1px solid grey;
+}
+.local-body {
+	display: flex;
+	align-items:flex-start;
+	background-color:#fff;
+    align-content: flex-start;
+    
+}
+.local-icon {
+    margin-top: 10px;
+    padding: 0;
+    margin-right: 10px;
+}
+
+/* Neighborhood */
+.neighborhood-section {
+    display: flex;
+    flex-direction: column;
+}
+.nheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    
+}
+.nheader h2 {
+    font-size: 36px;
+    padding: 30px;
+}
+.locations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+.all-locations {
+    width: 30%;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    border: 1px solid #dcdcdc;
+    background:#efefef;
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    height: 380px;
+    margin: 0px;
+    color: honeydew;
+}
+.cards h3 {
+    font-size: 30px;
+}
+
+.fitzroy {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/fitzroy.jpg');
+    background-size: cover;
+}
+.st-kilda {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('/images/st-kilda.jpg');
+    background-size: cover;
+}
+.central {
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/central-business-district.jpg');
+    background-size: cover;
+}
+.tagline {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    text-align: center;
+    background:#efefef;
+}
+.new-location {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.button {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    
+}
+
+/* Footer */
+footer {
+    background-color: #484848;
+    text-align: center;
+    margin: 20px;
+    color: honeydew;
+    width: 100%;
+    padding: 20px;
+}
+footer p {
+    padding-top: 30px; 
+    border-top: 5px solid #767676;
+    
+}
+
+
+
+
+/*
+google font: Nunito
+
+brand red: #ff5358
+dark red: #e00007
+background grey: #efefef
+title grey: #edefed
+footer grey: #2B2D2E
+*/
+
+
