@@ -12,15 +12,13 @@ nav {
     margin:0 1em;
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
-    width: 100%;
+    background-color: #fff, white;
 }
 
 ul {
     display: flex;
     align-self: flex-end;
     list-style-type: none;
-    padding: 10px;
 }
 
 /* Hero */
@@ -39,7 +37,6 @@ h2 {
     font-weight: 900;
     margin: 0;
 }
-
 .hero-content {
     max-width: 550px;
     color: honeydew;
@@ -66,7 +63,6 @@ h2 {
 .local-wrapper {
     display: flex;
     flex-direction: column;
-    
     width: 45%;
     border: 1px solid grey;
 }
@@ -74,12 +70,10 @@ h2 {
 	display: flex;
 	align-items:flex-start;
 	background-color:#fff;
-    align-content: flex-start;
 }
 .local-icon {
-    margin-top: 10px;
+    margin: 10px 10px 0px 0px;
     padding: 0;
-    margin-right: 10px;
 }
 
 /* Neighborhood */
@@ -122,7 +116,6 @@ h2 {
 .cards h3 {
     font-size: 30px;
 }
-
 .fitzroy {
     display: flex;
 	justify-content: center;
@@ -160,7 +153,6 @@ h2 {
     padding: 0px 15px;
 }
 .new-location {
-    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -173,7 +165,9 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     text-decoration: none;
-    
+    width: 250px;
+    text-align: center;
+    display: inline-block;
 }
 
 /* Footer */
@@ -183,15 +177,13 @@ footer {
     color: honeydew;
     width: 100%;
     padding: 20px 0px;
-    margin: 0px;
+    margin: 20px 0px;
 }
 footer p {
     padding-top: 30px; 
     border-top: 5px solid #767676;
     
 }
-
-
 
 
 /*
