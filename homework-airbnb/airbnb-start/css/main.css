@@ -56,7 +56,7 @@ h2 {
     justify-content: space-between;
 	border: 1px solid #dcdcdc;
     padding: 40px 0px;
-    
+    background-color:#efefef;
 }
 .local-title {
 	padding:20px;
@@ -75,7 +75,6 @@ h2 {
 	align-items:flex-start;
 	background-color:#fff;
     align-content: flex-start;
-    
 }
 .local-icon {
     margin-top: 10px;
@@ -92,19 +91,17 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-weight: bold;
-    
+    font-weight: bold;    
 }
 .nheader h2 {
     font-size: 36px;
-    padding: 30px;
+    padding-top: 30px;
 }
 .locations {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-content: center;
-
 }
 .all-locations {
     width: 30%;
@@ -158,8 +155,9 @@ h2 {
     display: flex;
     flex-direction: column;
     align-content: flex-end;
-    text-align: center;
-    background:#efefef;
+    text-align: left;
+    background-color:#efefef;
+    padding: 0px 15px;
 }
 .new-location {
     width: 200px;
@@ -182,10 +180,10 @@ h2 {
 footer {
     background-color: #484848;
     text-align: center;
-    margin: 20px;
     color: honeydew;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0px;
+    margin: 0px;
 }
 footer p {
     padding-top: 30px; 
