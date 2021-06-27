@@ -1,3 +1,3 @@
-# Clems Howmework Repository
+# Clems Homework Repository
 
-This is my Homework repository.
+This is my homework repository.
