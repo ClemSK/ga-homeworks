@@ -4,6 +4,9 @@
 /*footer link color = #003569*/
 /*text grey color = #999*/
 
+/* I forgot to start tracking changes from my sass file to my css file this morning, not sure how to resolve the changes. I had more improvements I wanted to make 
+but want to resolve the issue of sync'ing first. */
+
 body,
 input {
   font-family: "Karla", sans-serif;
@@ -18,7 +21,7 @@ input {
   main {
     display: flex;
     flex-direction: row;
-    align-self:center;
+    align-self: center;
 
     .phones {
       position: relative;
@@ -28,31 +31,30 @@ input {
       padding: 30px;
     }
     header {
-        margin-top: 20px;
-        margin-bottom: 0px;
+      margin-top: 20px;
+      margin-bottom: 0px;
     }
 
     .or {
-        text-transform: uppercase;
-        margin: 10px;
-        text-align: center;
+      text-transform: uppercase;
+      margin: 10px;
+      text-align: center;
     }
-    .border{
-        border: 1px solid #e6e6e6;
+    .border {
+      border: 1px solid #e6e6e6;
     }
     .account {
-        width: 320px;
-        text-align: center;
-        margin: 20px;
-        padding: 30px 0px;
-        color: #000;
+      width: 32 0px;
+      text-align: center;
+      margin: 20px;
+      padding: 30px 0px;
+      color: #000;
+    }
+    #terms {
+      color: #999;
     }
     .app {
-        color: #000;
-    }
-    a {
-        color: #3897f0;
-        text-decoration: none;
+      color: #000;
     }
 
     .sign-up {
@@ -62,25 +64,25 @@ input {
       align-items: center;
       align-self: center;
       width: 350px;
+      color: #999;
     }
 
     .input {
-        color: #999;
-        display: flex;
-        width: 230px;
-        padding: 7px;
-        margin: 3px;
-        border: none;
-        border-radius: 3px;
-        border: 1px solid #e6e6e6;
+      color: #999;
+      display: flex;
+      width: 230px;
+      padding: 7px;
+      margin: 3px;
+      border: none;
+      border-radius: 3px;
+      border: 1px solid #e6e6e6;
     }
     .text {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        width: 250px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      width: 250px;
     }
-    
     .button {
       background-color: #3897f0;
       width: 247px;
@@ -92,10 +94,11 @@ input {
       font-weight: 800;
       font-size: 15px;
     }
-    
   }
 
-  nav, ul,li{
+  nav,
+  ul,
+  li {
     display: flex;
     text-decoration: none;
     padding: 0 5px;
@@ -104,7 +107,7 @@ input {
     font-weight: 700;
   }
   footer ul li:last-of-type {
-      color: #999;
+    color: #999;
   }
   .fa-facebook-square {
     color: #fff;
@@ -112,32 +115,29 @@ input {
     padding: 0px 5px;
   }
   .copyright {
-      color: #999;
-      margin: 20px;
+    color: #999;
+    margin: 20px;
   }
 }
-@media only screen and (max-width:800px) {
-    
-    section:first-of-type {
-      display: none;
-    }
-    section:last-of-type {
-      flex:1;
-    }
-    
-    footer {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        
-    } 
-    nav, ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        width: 300px;
-        
-    }
-    
+@media only screen and (max-width: 800px) {
+  section:first-of-type {
+    display: none;
   }
+  section:last-of-type {
+    flex: 1;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  nav,
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+}

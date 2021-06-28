@@ -3,6 +3,11 @@
 /*border color = #e6e6e6*/
 /*footer link color = #003569*/
 /*text grey color = #999*/
+
+
+/* I forgot to start tracking changes from my sass file to my css file this morning, not sure how to resolve the changes. I had more improvements I wanted to make 
+but want to resolve the issue of sync'ing first. */ 
+
 body,
 input {
   font-family: "Karla", sans-serif;
