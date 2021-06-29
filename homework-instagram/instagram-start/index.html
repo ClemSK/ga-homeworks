@@ -30,7 +30,6 @@
         
         <form class="sign-up">
           <div>
-            <!-- look up correct fieled type for  mobile + email, is it just text? -->
             <input class="input" type="text" name="email-number" id="email-number" placeholder="Mobile Number or Email" />
           </div>
           
@@ -50,13 +49,12 @@
             <input type="submit" value="Sign up" class="button"/>
           </div>
           
-          <p class="sign-up">By signing up, you agree to our <br><a href="#">Terms &amp; Privacy Policy</a></p> <!-- tried to change the terms from blue to grey
-          but at this point my sass file was not sync'd to my css file.-->
+          <p class="sign-up">By signing up, you agree to our <br><a class="sign-up text" href="#">Terms &amp; Privacy Policy</a></p> 
         </form>
       </div>
         
         <div>
-          <p class="border account">Have an account? <a href="#">Log in</a></p>
+          <p class="border account">Have an account? <a class="login" href="#">Log in</a></p>
         </div>
         <p class="app">Get the app.</p>
         <div >
@@ -79,7 +77,7 @@
               <li>Terms</li>
               <li>Directory</li>
               <li>Language</li>
-              <li>&copy; 2017 Instagram</li> <!--Not sure how to separate the last item in the list, despite selecting li:last-of-type -->
+              <li class="copyright">&copy; 2017 Instagram</li> <!--Not sure how to separate the last item in the list, despite selecting li:last-of-type and using 'align-self: flex-end'-->
             </ul>
           </nav>
         </div>

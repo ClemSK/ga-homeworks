@@ -4,8 +4,7 @@
 /*footer link color = #003569*/
 /*text grey color = #999*/
 
-/* I forgot to start tracking changes from my sass file to my css file this morning, not sure how to resolve the changes. I had more improvements I wanted to make 
-but want to resolve the issue of sync'ing first. */
+/* I'm aware that my code is a bit repetitive and that I could be more succinct with the nesting of properties. It would be helpful if we could review how to do this.*/
 
 body,
 input {
@@ -49,12 +48,15 @@ input {
       margin: 20px;
       padding: 30px 0px;
       color: #000;
+      width: 350px;
     }
-    #terms {
-      color: #999;
-    }
+    
     .app {
       color: #000;
+    }
+    .login {
+      color: #3897f0;
+      text-decoration: none;
     }
 
     .sign-up {
@@ -82,6 +84,8 @@ input {
       text-align: center;
       align-items: center;
       width: 250px;
+      text-decoration: none;
+
     }
     .button {
       background-color: #3897f0;
@@ -106,18 +110,18 @@ input {
     text-transform: uppercase;
     font-weight: 700;
   }
-  footer ul li:last-of-type {
+  nav ul li:last-of-type { /* Not sure why the last item wont move to the end of nav section given these flex properties */
     color: #999;
+    display: flex;
+    align-self: flex-end;
+    
   }
   .fa-facebook-square {
     color: #fff;
     background-color: #3897f0;
     padding: 0px 5px;
   }
-  .copyright {
-    color: #999;
-    margin: 20px;
-  }
+  
 }
 @media only screen and (max-width: 800px) {
   section:first-of-type {
