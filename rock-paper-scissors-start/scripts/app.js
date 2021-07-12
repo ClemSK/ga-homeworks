@@ -1,7 +1,7 @@
 function init() {
   
   function buttonClick(event) {  
-  const choices = ["Rock", "Paper", "Scisors"]; 
+  const choices = ["Rock", "Paper", "Scissors"]; 
   const randomIndex = Math.floor(Math.random() * choices.length); // math.floor and math.random are used to return a random integer between 2 bounds. - The length property of an object which is an instance of type Array sets or returns the number of elements in that array. multiplying the random number with the number of elements in the array will return the result and also limit the number of options available as teh array is set to a max of 2. 
   computer.currentChoice = choices[randomIndex]; // computer accesses currentChoice and sets it to a choice in the array that is made random giving an element of unpredictability to the game. 
   
@@ -51,7 +51,7 @@ function init() {
           "Player choice: " + player.currentChoice;
       }
     } else if (computer.currentChoice === choices[1]) { // if the computer chooses Paper 
-      if (player.currentChoice === choices[2]) { // and the player selects Scisors
+        if (player.currentChoice === choices[2]) { // and the player selects Scissors
         document.getElementById("results").innertext = 
           "The player wins!" 
           
@@ -61,7 +61,7 @@ function init() {
           document.getElementById("player").innerText =
           "Player choice: " + player.currentChoice;
           
-      } else { // Not sure why when player chooses paper and computer chooses scisors, player wins? 
+        } else { // Not sure why when player chooses paper and computer chooses scissors, player wins? 
         document.getElementById("results").innerText = 
           "The computer wins!" 
 
@@ -70,9 +70,10 @@ function init() {
           
           document.getElementById("player").innerText =
           "Player choice: " + player.currentChoice;
-      }
-    }else if (computer.currentChoice === choices[2]) { // if the player chooses Scisors and the computer chooses paper it's a tie 
-        document.getElementById("results").innerText = 
+        }
+      } else if (computer.currentChoice === choices[2]) { // if the player chooses Scissors and the computer chooses paper it's a tie 
+      
+          document.getElementById("results").innerText = // but that's not right. 
           "The player wins!" 
           
           document.getElementById("computer").innerText =
@@ -80,7 +81,7 @@ function init() {
           
           document.getElementById("player").innerText =
           "Player choice: " + player.currentChoice;
-
+      
       } else { // the options have been run through so there is no need to add an alternate option. 
         document.getElementById("results").innerText = 
         "The computer wins!"
@@ -93,61 +94,40 @@ function init() {
       }  
 
       const hoverButton = document.querySelectorAll("input") // what am I selecting? input buttons
-      const buttonColor = document.querySelector('#button-color-span')
-
-      const handleMouse//Over = (event) => {
+      
+      const handleMouseEnter = (event) => {
         console.log('the mouse is over the button', event.target)
-        if (event.target.input === billUrl) {
-          event.target.src = nickUrl
-        } else if (event.target.src === nickUrl) {
-          event.target.src = billUrl
-        }
+        event.target.className = 'inputRed' 
       }
 
-      const button = document.querySelector('#button')
-      const buttonColorText = document.querySelector('#button-color-span')
-      
-      
-      function handleMouseOver(event) {
-        console.log(event)
-        button.classList.hover('inputWhite')
-        buttonColorText.textContent = event.target.classList.contains('inputRed')
-        ? 'inputWhite'
-        : 'inputRed'
-      
-        // buttonColorText.textContent = buttonColorText.textContent === 'red' ? 'blue' : 'red'
-        // can also be coded as event.target.classList.toggle('button-class-blue')
+      const handleMouseLeave = (event) => {
+        console.log('the mouse is not over the button', event.target)
+        event.target.className = 'inputWhite'
       }
-      
-      hoverButton.addEventListener("mouseenter", handleMouseOver)
-      hoverButton.addEventListener("mouseleave", handleMouseLeave)
+
+      hoverButton.forEach(function(input){
+        input.addEventListener("mouseenter", handleMouseEnter)
+        input.addEventListener("mouseleave", handleMouseLeave)
+      })
       
 
-  const reset = document.querySelector('#reset-btn')
-  reset.addEventListener("click", handleReset)
+      const reset = document.querySelector('#reset-btn')
+      reset.addEventListener("click", handleReset)
 
-  function handleReset(event){
-      // need to reset player position, computer position and reset the message to default
-      // need to add an event listener to handle the click
-      // would it work as a loop? cycliing through by assigning value and thn resetting? 
-    event.preventDefault()
-    // event.target.id === "input" 
-    document.getElementById("results").innerText = ""
-    document.getElementById("player").innerText = ""
-    document.getElementById("computer").innerText = ""
-    // buttonReset.IdName = 'reset-btn'
-    // buttonReset.innerHTML = 'Reset!'
-}
+      function handleReset(event){
+        document.getElementById("results").innerText = ""
+        document.getElementById("player").innerText = ""
+        document.getElementById("computer").innerText = ""
+      
+      }
 
 }
-
-
 
   // click event handlers
 
-  document.getElementById("rock").addEventListener("click", buttonClick); // here we call the functions so that the player can interact with the game.
-  document.getElementById("paper").addEventListener("click", buttonClick);
-  document.getElementById("scisors").addEventListener("click", buttonClick);
+        document.getElementById("rock").addEventListener("click", buttonClick); // here we call the functions so that the player can interact with the game.
+        document.getElementById("paper").addEventListener("click", buttonClick);
+        document.getElementById("scissors").addEventListener("click", buttonClick);
 
 }
 

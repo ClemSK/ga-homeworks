@@ -12,8 +12,6 @@ body {
       flex-direction: column;
       justify-content: center;
       margin: 40px;
-
-      
   }
   
   p {
@@ -31,7 +29,6 @@ body {
     color: white;
     padding: 15px;
     border-radius: 15px; 
-    flex-shrink: 1;
   }
   
   .inputWhite {
@@ -40,6 +37,7 @@ body {
     height: 40px;
     color: red;
     border: solid red 3px;
+    margin: 15px 5px;
   }
   
   .inputRed {
@@ -48,6 +46,7 @@ body {
     height: 40px;
     color: white;
     border: solid white 3px;
+    margin: 15px 5px;
   }
   
   
