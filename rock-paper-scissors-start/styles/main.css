@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  section {
+      background: lightgray;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 40px;
+
+      
+  }
+  
+  p {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .result-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h2#results {
+    background: red;
+    color: white;
+    padding: 15px;
+    border-radius: 15px; 
+    flex-shrink: 1;
+  }
+  
+  .inputWhite {
+    background: white;
+    width: 80px;
+    height: 40px;
+    color: red;
+    border: solid red 3px;
+  }
+  
+  .inputRed {
+    background: red;
+    width: 80px;
+    height: 40px;
+    color: white;
+    border: solid white 3px;
+  }
+  
+  
