@@ -1,0 +1,223 @@
+/*
+google font: Nunito
+
+brand red: #ff5358
+dark red: #e00007
+background grey: #efefef
+title grey: #edefed
+footer grey: #2B2D2E
+*/
+
+/* Defaults and Elements */
+
+body {
+	margin:0;
+	font-family: 'Nunito', sans-serif;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0 0 20px;
+}
+h1 {
+	font-size:75px;
+}
+h2 {
+	font-size:42px;
+}
+p {
+	font-size:20px;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+/* Components */
+
+.section {
+	padding:50px 0;
+}
+.section-header,
+.section-footer {
+	text-align: center;
+}
+
+.highlighted {
+	background: #efefef;
+}
+.grid {
+	display: flex;
+	justify-content: center;
+}
+.shadow {
+	text-shadow:0 1px 0px rgba(0, 0, 0, 0.5);
+}
+.button {
+	display: inline-block;
+	padding:0.75em 3em;
+	color:#fff;
+	font-size:20px;
+	font-weight: 700;
+	background:#ff5358;
+	border-radius:7px;
+	border-bottom:3px solid #e00007;
+	transition: all 0.3s ease;
+}
+.button:hover {
+	background:#e00007;
+}
+
+.grid {
+	display: flex;
+	justify-content: space-between;
+	text-align:center;
+	list-style: none;
+}
+.grid-item {
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	margin:50px;
+}
+
+/* Header */
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:10px 30px;
+}
+.header-logo {
+	height:40px;
+}
+.header-nav li {
+	display: inline;
+}
+.header-nav a {
+	margin:0 1em;
+	color:#000;
+	font-size:20px;
+}
+.header-nav a:last-child {
+	margin-right:0;
+}
+
+/* Hero */
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height:700px;
+
+	color:#fff;
+	text-align:center;
+
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/melbourne.jpg');
+	background-size:cover;
+}
+
+.hero-content {
+	max-width:600px;
+	font-weight: 700;
+}
+.hero-content p {
+	font-size:24px;
+}
+.hero-button {
+	margin-top:20px;
+}
+
+/* Callout boxes */
+
+.callout {
+	flex:1;
+	display: flex;
+	flex-direction: column;
+	margin:0 20px;
+	text-align: left;
+	border:1px solid #dcdcdc;
+}
+.callout-title {
+	margin:0;
+	padding:20px;
+	background-color:#edefed;
+}
+.callout-body {
+	flex:1;
+	display: flex;
+	align-items:flex-start;
+	padding:20px;
+	background-color:#fff;
+}
+.callout-icon {
+	margin-right:20px;
+}
+
+/* Location */
+
+.location {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: stretch;
+
+	height:380px;
+	padding:20px;
+
+	color:#fff;
+	background-size:cover;
+}
+.location-fitzroy {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/fitzroy.jpg');
+}
+.location-st-kilda {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/st-kilda.jpg');
+}
+.location-cbd {
+	background-image:
+		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+		url('../images/central-business-district.jpg');
+}
+.location-title {
+	margin:0 0 10px;
+	font-size:50px;
+	line-height: 1.1;
+}
+.location-tagline {
+	margin:0;
+}
+.location-footer {
+	flex:auto;
+	padding:20px;
+
+	text-align:left;
+	background:#efefef;
+}
+.location-footer p {
+	font-size:16px;
+}
+
+/* Footer */
+
+footer {
+	padding:50px;
+
+	color:#fff;
+	text-align:center;
+
+	background:#2B2D2E;
+}
+footer p {
+	padding-top:30px;
+	border-top:1px solid #ccc
+}

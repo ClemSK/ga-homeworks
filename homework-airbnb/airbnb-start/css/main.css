@@ -125,7 +125,7 @@ h2 {
 		url('../images/fitzroy.jpg');
     background-size: cover;
 }
-.st-kilda {
+/* .st-kilda {
     display: flex;
 	justify-content: center;
 	align-items: center;
@@ -133,7 +133,17 @@ h2 {
 		linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
 		url('/images/st-kilda.jpg');
     background-size: cover;
+} */
+.st-kilda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('../images/st-kilda.jpg');
+    background-size: cover;
 }
+
 .central {
     display: flex;
 	justify-content: center;
