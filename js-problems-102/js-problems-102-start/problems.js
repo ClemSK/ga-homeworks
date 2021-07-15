@@ -5,14 +5,20 @@
 // ? It should handle complex data types eg: {}, [] etc.
 // ? eg: [0, false, [], undefined, {}, NaN, 'Kevin'] => [0, [], {}, 'Kevin'];
 function removeBlank(array) {
-  const filterArray = array.filter(x => x !== false) // this code returned zero and the complext data types but not the string
-  console.log(filterArray)
-  return filterArray
+  return array.filter((value) => {
+    return value === 0 || !!value
+  })
+}
+
+// function removeBlank(array) {
+//   const filterArray = array.filter(x => x !== false) // this code returned zero and the complext data types but not the string
+//   console.log(filterArray)
+//   return filterArray
 
   // const rmEmpty = array.filter((x) => x) - this code returned the string but not zero or complex data types. Not sure how to combine the two solutions
   // console.log(rmEmpty)
   // return rmEmpty 
-  }
+  // }
 
 // ? write a function to return a random element from an array
 // ? eg: [1,"elephant", "apple", 67] => "elephant"
@@ -24,32 +30,52 @@ function randomElement(array) {
 // ? write a function that returns the second lowest and second highest number in an array
 // ? eg: [1,2,3,4,5,6,7,8] => [2,7]
 function secondLowestSecondHighest(array) {
-  console.log(array)
-  const numArray = array.sort((a, b) => a > b ? 1 : -1)
-  console.log(numArray)
-
-  const secondHighest = numArray.slice(-2, -1)[0]
-  console.log(secondHighest)
-
-  const secondLowest = numArray[1]
-  console.log(secondLowest)
-
-  const newArray = []
-  newArray.push(secondLowest, secondHighest)
-  console.log(newArray)
-  return newArray
+  const orderedArray = array.sort((a,b) => {
+    return a - b
+  })
+  return [orderedArray[1], orderedArray[array.length - 2]]
 }
+
+// function secondLowestSecondHighest(array) {
+//   console.log(array)
+//   const numArray = array.sort((a, b) => a > b ? 1 : -1)
+//   console.log(numArray)
+
+//   const secondHighest = numArray.slice(-2, -1)[0]
+//   console.log(secondHighest)
+
+//   const secondLowest = numArray[1]
+//   console.log(secondLowest)
+
+//   const newArray = []
+//   newArray.push(secondLowest, secondHighest)
+//   console.log(newArray)
+//   return newArray
+// }
 
 // ? write a function that will convert a price into coins needed to make up that price
 // ? the coins available are 1, 2, 5, 10, 20, 50, 100
 // ? the function should use the smallest number of coins possible
 // ? eg: coins(1.99) => [100, 50, 20, 20, 5, 2, 2]
 function coins(price) {
-
+  let pence = price * 100
+  const coins = [100, 50, 20, 10, 5, 2, 1]
+  const result = []
+  coins.forEach((coin) => {
+    while (pence - coin >= 0) {
+      pence -= coin
+      result.push(coin)
+    }
+  })
+  return result
 }
 
 // ? write a function to merge two arrays and remove duplicates
 // ? eg: mergeUnique([9,8,8,9], [7,8,8,7]) => [9,8,7]
+function mergeUnique(arr1, arr2) {
+  return Array.from(new Set(arr1.concat(arr2)))
+}
+
 function mergeUnique(arr1, arr2) {
   const arr3 = [...arr1,...arr2]
   console.log(arr3)
@@ -80,16 +106,15 @@ function fibonacci(n) {
   return fibArray
 }
 
-
-
-
-
   // const n = []
   // n[0] = 0
   // [1] = 1
   
 //   for (n = 2; n <= 10; n++) {
 //   // Next fibonacci number = previous + one before previous
+
+
+
 //   // Translated to JavaScript:
 //   fib[n] = fib[n + 2] + fib[n + 1];
 //   console.log(fib[n]);
