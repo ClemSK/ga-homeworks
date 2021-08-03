@@ -1,0 +1,144 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden; /* generally you don't mess with this but I don't want any scrolling regardless */
+    /* background: rgb(255, 213, 134);  */
+    font-family: 'Play', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to bottom, black,  rgb(24, 0, 24),rgba(70, 0, 70, 0.9), rgba(70, 0, 70, 0.6));
+    /* background: black; */
+    /* background-image: radial-gradient(#ff8a00, #e52e71); */
+    display: flex;
+    flex-direction: column;
+    /* background-image: url('https://www.popsci.com/uploads/2019/10/25/BROOAKO2AURRGAKZZ27N5IOCHM.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+  }
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 70px;
+    /* color: linear-gradient(45deg, pink, blue, red, yellow); */
+    color:  rgba(140, 20, 252, 1);
+    
+}
+
+.game-section {
+    display: flex;
+    justify-content: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid white;
+    background: linear-gradient(45deg, pink, blue, red, yellow)
+    /* background: url('https://images.newscientist.com/wp-content/uploads/2020/05/22112120/sagdig_opo0431b_web.jpg') */
+
+}
+
+.fixed {
+    inset: 0;
+    position: absolute;
+    
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-white {
+    background-color: white;
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+
+}
+.points-container {
+    background-color: yellow;
+    border:rgba(70, 0, 70, 0.6) solid 3px
+}
+.end-score{
+    font-weight: bold;
+    font-size: 50px;
+    margin: 0px;
+    color: rgba(140, 20, 252, 1);
+}
+.points {
+    font-size: 30px;
+    color: rgba(140, 20, 252, 1);
+}
+
+.modalClock {
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px;
+}
+
+.start-button{
+    background-color:rgba(140, 20, 252, 1);
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    color: white;
+    font-family: 'Play', sans-serif;
+    font-size: 30px;
+    border: 2px solid black
+}
+
+.game-time,.game-score{
+    color:  rgba(140, 20, 252, 1);
+    font-size: 30px;
+}
+.game-score, .game-score {
+    margin: 40px 40px 0px 5px;
+}
+.game-time {
+    display: inline-block;
+    margin: 20px 5px 20px 5px;
+}
+
+.instructions {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black
+}
+
+ul, li{
+    display: flex;
+    justify-content: row;
+    padding: 0px 30px 20px 30px;
+    /* padding: 10px; */
+}
+
+.arrow {
+    /* size: 30px; */
+    display: flex;
+    flex-wrap: wrap;
+    /* https://www.toptal.com/designers/htmlarrows/arrows/right-squiggle-arrow/ */
+    font-size: 30px;
+    
+}
+
+.how-to {
+    text-decoration: underline;
+    font-size: 45px;
+}
+
+div.arrow {
+    font-size: 60px;
+    
+}
+
+
+
+
