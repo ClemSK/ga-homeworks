@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #ed1e3a;
+  margin: 0px;
+  padding: 20px 10px;
+  color: white;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav ul {
+  display: flex;
+  margin: 0px;
+}
+
+.header nav ul li {
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  margin-right: 8px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+}
+
+.menu svg {
+  height: 30px;
+  width: 30px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+  font-size: 50px;
+}
+
+.data-source-list {
+  padding: 12px;
+  background-color: #a1a1a1;
+  color: black;
+  position: absolute;
+  right: 15px;
+  top: 50px;
+}
+
+.data-source-list li {
+  list-style: none;
+  font-size: 16px;
+}
+
+.characters-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character-card {
+  margin: 10px;
+  background-color: #ececec;
+  border-radius: 8px;
+  padding: 8px;
+  flex: 1 1 25%;
+}
+
+.character-card-top {
+  display: flex;
+  justify-content: center;
+}
+
+.character-card-top img {
+  border-radius: 8px;
+}
+
+/* ADD THE CSS FOR YOUR HOMEWORK BELOW HERE */
