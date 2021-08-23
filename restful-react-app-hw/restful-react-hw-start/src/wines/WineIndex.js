@@ -22,17 +22,22 @@ const WineIndex = () => {
   console.log(state)
 
   return (
-    <section>
-      <div>
-        <div>
-          {state.wines.map((wine) => {
-            <WineCard
-              key={wine._id}
-              _id={wine._id}
-              origin={wine.origin}
-              image={wine.image}
-            />
-          })}
+    <section className="section has-background-danger">
+      <div className="container">
+        <div className="columns is-multiline">
+          {state.wines.map(
+            (wine) => (
+              <WineCard
+                key={wine._id}
+                _id={wine._id}
+                name={wine.name}
+                image={wine.image}
+                origin={wine.origin}
+                abv={wine.abv}
+              />
+            )
+            // <WineCard key={wine._id} {...wine} />
+          )}
         </div>
       </div>
     </section>
