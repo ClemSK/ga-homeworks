@@ -11,6 +11,9 @@ const NavBar = () => (
         <Link to="/wines" className="navbar-item">
           Wine Index
         </Link>
+        <Link to="wines/new" className="navbar-item">
+          Add a wine!
+        </Link>
         <Link to="/register" className="navbar-item">
           Register
         </Link>

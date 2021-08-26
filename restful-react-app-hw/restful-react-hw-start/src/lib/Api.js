@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { getToken } from '../components/auth/Auth'
 
 const baseUrl = 'https://ga-winebored.herokuapp.com'
 
@@ -8,6 +9,20 @@ export const getAllWines = () => {
 
 export const getSingleWine = (id) => {
   return axios.get(`${baseUrl}/wines/${id}`)
+}
+ 
+export const createWine = (formData) => {
+  const requestConfig = {
+    headers: { Authorisation: `Bearer ${getToken()}` }
+  }
+  return axios.post(`${baseUrl}/wines`, formData, requestConfig)
+}
+
+export const editWine = (id, formData) => {
+  const requestConfig = {
+    headers: { Authorisation: `Bearer ${getToken()}` }
+  }
+  return axios.put(`${baseUrl}/wines/${id}`, formData, requestConfig)
 }
 
 // AUTH METHODS
