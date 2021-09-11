@@ -6,6 +6,8 @@ import ImageUrlField from '../components/fields/ImageUrlField'
 import OriginField from '../components/fields/OriginField'
 import TastingNotesField from '../components/fields/TastingNotes'
 
+// Very similar to new wines, but to update the wines
+
 const WineEdit = () => {
   const { id } = useParams()
   const history = useHistory()
@@ -21,7 +23,7 @@ const WineEdit = () => {
       console.error(`Anerror occured fetching wine ${id}`, err)
     }
   }
-  
+
   React.useEffect(() => {
     getSingleWineFromApi()
   }, [])

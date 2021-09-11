@@ -6,16 +6,19 @@ import WineCard from './WineCard' // This component pulls in other elements from
 const WineIndex = () => {
   const [state, setState] = React.useState({ wines: [] }) // setting state, the array to store and update the info
 
-  const fetchDataFromApi = async () => { // getting the info from the Api
+  const fetchDataFromApi = async () => {
+    // getting the info from the Api
     try {
       const res = await getAllWines()
       setState({ wines: res.data })
-    } catch (err) { // if unable to get the data we can catch the error and log a message for where the error occured
+    } catch (err) {
+      // if unable to get the data we can catch the error and log a message for where the error occured
       console.log('There was an error in fetching the API data', err)
     }
   }
 
-  React.useEffect(() => { // calling the Api
+  React.useEffect(() => {
+    // calling the Api
     fetchDataFromApi()
   }, [])
 

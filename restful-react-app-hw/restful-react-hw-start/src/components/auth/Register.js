@@ -6,6 +6,7 @@ const Register = () => {
   const history = useHistory()
   const [state, setState] = React.useState({
     formData: {
+      // adding new values from the user to create a user
       username: '',
       email: '',
       password: '',
@@ -29,18 +30,18 @@ const Register = () => {
 
   const handleChange = async (e) => {
     const formData = {
-      ...state.formData,
+      ...state.formData, // spreading in the key-value pairs that were entered by the user
       [e.target.name]: e.target.value
     }
-    setState({ formData })
-    console.log(e)
+    setState({ formData }) // setting state to the form data
+    console.log(e) // displaying the output
   }
 
   return (
     <section className="section is-fullheight-with-navbar has-background-danger">
       <div className="container">
         <div className="columns">
-          <form
+          <form // creating the registering fields, they're similar with minor differences for the different fields
             onSubmit={handleSubmit}
             className="column is half is-offset-one-quarter box"
           >
@@ -87,7 +88,7 @@ const Register = () => {
             <div className="field">
               <label className="label">Password Confirmation</label>
               <div className="control">
-                <input
+                <input // important to have confirmation or the user may think that there is a problem with the app rather than a mis-typed password
                   className="input"
                   placeholder="Password Confirmation"
                   name="passwordConfirmation"

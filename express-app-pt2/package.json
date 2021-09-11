@@ -1,0 +1,26 @@
+{
+  "name": "express-test-2",
+  "version": "1.0.0",
+  "description": "test of express",
+  "main": "server.js",
+  "scripts": {
+    "start:server": "npx nodemon server.js",
+    "seed": "node db/seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "albums",
+    "express",
+    "ga",
+    "test",
+    "app"
+  ],
+  "type": "module",
+  "author": "Clement Seconde-Kynnersley",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.5",
+    "mongoose-unique-validator": "^2.0.3"
+  }
+}

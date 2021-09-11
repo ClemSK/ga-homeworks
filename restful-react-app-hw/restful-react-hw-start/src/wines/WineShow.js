@@ -1,12 +1,17 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import { getSingleWine } from '../lib/Api'
+import { Link, useParams, useHistory } from 'react-router-dom'
+import { getSingleWine, deleteWine } from '../lib/Api'
+import { getPayload } from '../components/auth/Auth'
+
+// here we take the values that are brought back from the Api to display them
 
 const WineShow = () => {
   const { id } = useParams()
+  const history = useHistory()
   const [state, setState] = React.useState({ wine: null })
 
   const getSingleWineFromApi = async () => {
+    // getting info from the Api
     try {
       const res = await getSingleWine(id)
       setState({ wine: res.data })
@@ -19,13 +24,27 @@ const WineShow = () => {
   }
 
   React.useEffect(() => {
+    // calling the function to recieve the data
     getSingleWineFromApi()
-  }, [])
+  }, []) // using the square brackets to limit the calls to the Api
 
-  console.log('state is wine', state)
+  console.log('state is', state)
 
   if (state.wine === null) {
-    return <p>Loading...</p>
+    return <p>Loading...</p> // if there are issues getting the info from the Api
+  }
+
+  const isOwner = getPayload().sub === state.wine.user._id
+  console.log('is owner is', isOwner)
+
+  const handleDelete = async () => {
+    const wineIdToDelete = id
+    try {
+      await deleteWine(wineIdToDelete)
+      history.push('/wines')
+    } catch (err) {
+      console.error(`failed to delete wine ${id}`, err)
+    }
   }
 
   return (
@@ -62,8 +81,18 @@ const WineShow = () => {
               </span>{' '}
               Added By
             </h4>
-            <p>{state.wine.origin}</p>
+            <p>{state.wine.user.username}</p>
             <hr />
+            {isOwner && (
+              <>
+                <Link to={`/wines/${id}/edit`} className="button is-warning">
+                  Edit Wine
+                </Link>
+                <button className="button is-danger" onClick={handleDelete}>
+                  Delete Wine
+                </button>
+              </>
+            )}
           </div>
 
           <div className="column is-half">

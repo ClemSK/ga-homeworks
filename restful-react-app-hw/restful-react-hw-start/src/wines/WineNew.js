@@ -6,8 +6,11 @@ import ImageUrlField from '../components/fields/ImageUrlField'
 import OriginField from '../components/fields/OriginField'
 import TastingNotesField from '../components/fields/TastingNotes'
 
+// when adding in a new wine we call in the components and update the fields.
+// the fields are separated to reduce the length of code in 1 file and improve readability
+
 const WineNew = () => {
-  const history = useHistory()
+  const history = useHistory() // like registering a new user, recycling the history component
   const [state, setState] = React.useState({
     formData: {
       tastingNotes: '',
@@ -33,7 +36,7 @@ const WineNew = () => {
   const handleChange = (e) => {
     const formData = {
       ...state.formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value // using state to handle change in the forms
     }
 
     setState({ formData })
@@ -50,9 +53,9 @@ const WineNew = () => {
             onSubmit={handleSubmit}
             className="column is-half is-offset-one-quarter box"
           >
-            <WineNameField
+            <WineNameField // calling in the different fields
               handleChange={handleChange}
-              name={state.formData.name}
+              name={state.formData.name} // taking the form values
             />
             <TastingNotesField
               handleChange={handleChange}
@@ -70,7 +73,7 @@ const WineNew = () => {
               <input
                 className="button is-follwidth is-warning"
                 type="submit"
-                value={`Add ${state.formData.name || 'new wine'}`}
+                value={`Add ${state.formData.name || 'new wine'}`} // updating the button text based on the name of the new wine, switching out the default
               />
             </div>
           </form>
