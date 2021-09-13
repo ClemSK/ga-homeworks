@@ -8,6 +8,7 @@ const commentSchema = new mongoose.Schema({
 
 const albumSchema = new mongoose.Schema({
   band: {
+    bandName: String,
     nameOfMemebers: { guitarist: String, drummer: String, bassist: String },
     numberOfMembers: Number,
     genre: String,
@@ -15,7 +16,10 @@ const albumSchema = new mongoose.Schema({
   albumTitle: String,
   isBanger: Boolean,
   releaseYear: Number,
-  // albumCover: Image,
+  albumCover: {
+    src: String,
+    alt: String,
+  },
   comments: [],
 });
 

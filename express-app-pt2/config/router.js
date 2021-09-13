@@ -1,8 +1,17 @@
 import express from "express";
-import { getAllAlbums } from "../controllers/albumsControllers.js";
+import albumsControllers from "../controllers/albumsControllers.js";
 
 const router = express.Router();
 
-router.route("/albums").get(getAllAlbums);
+router
+  .route("/albums")
+  .get(albumsControllers.getAllAlbums)
+  .post(albumsControllers.createAlbum);
+
+router
+  .route("/albums/:id")
+  .get(albumsControllers.getAlbum)
+  .delete(albumsControllers.deleteAlbum)
+  .put(albumsControllers.updateAlbum);
 
 export default router;

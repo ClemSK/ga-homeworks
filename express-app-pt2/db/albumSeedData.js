@@ -8,6 +8,7 @@ export const albumSeedData = [
         guitarist: "Bob Martey",
         drummer: "dave growl",
         bassist: "cherry bomb",
+        genre: "Heavy-Metal",
       },
     },
     albumTitle: "Heaviest Album Ever m/",
@@ -24,13 +25,16 @@ export const albumSeedData = [
 // const albumSchema = new mongoose.Schema({
 //   band: {
 //     bandName: String,
-//     nameOfMemebers: String,
+//     nameOfMemebers: { guitarist: String, drummer: String, bassist: String },
 //     numberOfMembers: Number,
 //     genre: String,
 //   },
 //   albumTitle: String,
 //   isBanger: Boolean,
 //   releaseYear: Number,
-//   albumCover: Image,
+//   albumCover: {
+//     src: String,
+//     alt: String,
+//   },
 //   comments: [],
 // });
