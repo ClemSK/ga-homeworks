@@ -7,20 +7,11 @@ const commentSchema = new mongoose.Schema({
 });
 
 const albumSchema = new mongoose.Schema({
-  band: {
-    bandName: String,
-    nameOfMemebers: { guitarist: String, drummer: String, bassist: String },
-    numberOfMembers: Number,
-    genre: String,
-  },
+  genre: String,
+  bandName: String,
   albumTitle: String,
-  isBanger: Boolean,
   releaseYear: Number,
-  albumCover: {
-    src: String,
-    alt: String,
-  },
-  comments: [],
+  comments: [commentSchema],
 });
 
 albumSchema.plugin(mongooseUniqueValidator);
@@ -28,3 +19,11 @@ albumSchema.plugin(mongooseUniqueValidator);
 const Album = mongoose.model("Album", albumSchema);
 
 export default Album;
+
+// nameOfMemebers: { guitarist: String, drummer: String, bassist: String },
+// numberOfMembers: Number,
+// albumCover: {
+//   src: String,
+//   alt: String,
+// },
+// isBanger: Boolean,

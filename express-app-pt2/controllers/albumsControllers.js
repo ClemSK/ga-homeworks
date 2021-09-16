@@ -21,7 +21,7 @@ async function createAlbum(req, res, next) {
 async function getAlbum(req, res, next) {
   const id = req.params.id;
   try {
-    const album = await Albym.findById(id);
+    const album = await Album.findById(id);
     return res.status(200).json(album);
   } catch (err) {
     next(err);
