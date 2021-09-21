@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import mongooseUniqueValidator from "mongoose-unique-validator";
+import mongoose from 'mongoose';
+import mongooseUniqueValidator from 'mongoose-unique-validator';
 
 const commentSchema = new mongoose.Schema({
   text: { type: String, requred: true, maxLength: 300 },
@@ -12,18 +12,11 @@ const albumSchema = new mongoose.Schema({
   albumTitle: String,
   releaseYear: Number,
   comments: [commentSchema],
+  tracks: [{ type: mongoose.Types.ObjectId, ref: 'Track' }],
 });
 
 albumSchema.plugin(mongooseUniqueValidator);
 
-const Album = mongoose.model("Album", albumSchema);
+const Album = mongoose.model('Album', albumSchema);
 
 export default Album;
-
-// nameOfMemebers: { guitarist: String, drummer: String, bassist: String },
-// numberOfMembers: Number,
-// albumCover: {
-//   src: String,
-//   alt: String,
-// },
-// isBanger: Boolean,
