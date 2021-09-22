@@ -1,4 +1,4 @@
-import Album from "../model/albums.js";
+import Album from '../model/albums.js';
 
 // creating a comment
 async function createComment(req, res, next) {
@@ -10,11 +10,14 @@ async function createComment(req, res, next) {
     // setting the http error code to 404
     if (!album) {
       // if not an album then display:
-      return res.status(404).send({ message: "Album does not exist" });
+      return res.status(404).send({ message: 'Album does not exist' });
     }
 
     // defining a new comment - request body
-    const newComment = req.body;
+    const newComment = {
+      ...req.body,
+      createdBy: req.currentUser,
+    };
 
     album.comments.push(newComment); // pushing the new comment into the comments array
     const savedAlbum = await album.save(); // saving adds the comment to the db
@@ -26,18 +29,18 @@ async function createComment(req, res, next) {
 }
 // unable to get comments in the api, trying to create a get function for my objects
 
-async function getComment(req, res, next) {
-  try {
-    const { id, commentId } = req.params;
-    const album = await Album.findById(id);
+// async function getComment(req, res, next) {
+//   try {
+//     const { id, commentId } = req.params;
+//     const album = await Album.findById(id);
 
-    const comment = album.comments.id(commentId);
+//     const comment = album.comments.id(commentId);
 
-    return res.status(200).json(comment);
-  } catch (err) {
-    next(err);
-  }
-}
+//     return res.status(200).json(comment);
+//   } catch (err) {
+//     next(err);
+//   }
+// }
 
 // to delete a comment, we need to take the album id and the comment id, to get specific
 async function deleteComment(req, res, next) {
@@ -46,12 +49,12 @@ async function deleteComment(req, res, next) {
     const album = await Album.findById(id);
 
     if (!album) {
-      return res.status(404).send({ message: "Album does not exist" });
+      return res.status(404).send({ message: 'Album does not exist' });
     }
     // as earlier sending an error message when the object is not found
     const comment = album.comments.id(commentId);
     if (!comment) {
-      return res.status(404).send({ message: "Comment does not exist" });
+      return res.status(404).send({ message: 'Comment does not exist' });
     }
 
     // here we are removing the comment - use .remove as .delete is depricated
@@ -72,12 +75,12 @@ async function updateComment(req, res, next) {
     const album = await Album.findById(id);
 
     if (!album) {
-      return res.status(404).send({ message: "Album does not exist" });
+      return res.status(404).send({ message: 'Album does not exist' });
     }
 
     const comment = album.comments.id(commentId);
     if (!comment) {
-      return res.status(404).send({ message: "Comment does not exist" });
+      return res.status(404).send({ message: 'Comment does not exist' });
     }
 
     comment.set(req.body);

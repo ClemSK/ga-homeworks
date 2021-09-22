@@ -38,7 +38,7 @@ router
   .route('/tracks/:id')
   .get(tracksController.getTrack)
   .put(secureRoute, tracksController.updateTrack)
-  .delete(secureRoute, tracksController.deleteTrack);
+  .delete(secureRoute, tracksController.deleteTrack); // adding a secureRoute to prevent unregistered users from making changes
 
 router.route('/tracks/:id/albums').get(tracksController.getAllAlbumsForTracks);
 router.route('/albums/:id/tracks').get(albumsControllers.getAllTracksForAlbum);

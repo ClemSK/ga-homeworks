@@ -15,12 +15,15 @@ async function registerUser(req, res, next) {
 // login user
 async function loginUser(req, res, next) {
   try {
+    //   finding an email address
     const user = await User.findOne({ email: req.body.email });
 
+    // if there is no user
     if (!user) {
       return res.status(404).send({ message: 'Not a user' });
     }
 
+    // if password doesnt
     if (!user.validatePassword(req.body.password)) {
       return res.status(401).send({ message: 'Unauthorised' });
     }
