@@ -82,9 +82,11 @@ print(palindrome_check('clem is great'))
 
 
 def order_string_alphabetically(string):
-    string_value = string.replace(' ', '').lower()
-    sorted_string = sorted(string_value)
-    return ''.join(sorted_string)
+    return "".join(sorted(list(string.lower().replace(" ", ""))))
+    # refactored version of this:
+    # string_value = string.replace(' ', '').lower()
+    # sorted_string = sorted(string_value)
+    # return ''.join(sorted_string)
 
 
 print(order_string_alphabetically('Clem Is Great'))
@@ -94,7 +96,9 @@ print(order_string_alphabetically('Clem Is Great'))
 
 
 def title_case(string):
-    return " ".join(word.capitalize() for word in string.split())
+    return string.title()
+    # refactored version of below:
+    # return " ".join(word.capitalize() for word in string.split())
 
 
 print(title_case("they're my new blue socks"))
